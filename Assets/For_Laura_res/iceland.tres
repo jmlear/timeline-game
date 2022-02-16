@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Assets/ImageDatabase/Iceland_12-11-18.jpg" type="Texture" id=1]
+[ext_resource path="res://card_template.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+card_image = ExtResource( 1 )
+date_month = 12
+date_day = 11
+date_year = 2018

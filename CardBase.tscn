@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CardBase.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/arial.tres" type="DynamicFont" id=2]
+
+[node name="CardBase" type="MarginContainer"]
+margin_right = 250.0
+margin_bottom = 350.0
+rect_pivot_offset = Vector2( 125, 175 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+card_date = NodePath("Bars/DateArea/CenterContainer/DateLabel")
+card_image = NodePath("Bars/Image")
+
+[node name="Bars" type="VBoxContainer" parent="."]
+margin_right = 250.0
+margin_bottom = 350.0
+
+[node name="Image" type="TextureRect" parent="Bars"]
+margin_right = 250.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DateArea" type="MarginContainer" parent="Bars"]
+margin_top = 300.0
+margin_right = 250.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Bars/DateArea"]
+margin_right = 250.0
+margin_bottom = 50.0
+
+[node name="DateLabel" type="Label" parent="Bars/DateArea/CenterContainer"]
+margin_left = 90.0
+margin_top = 10.0
+margin_right = 160.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 2 )
+text = "12345"
